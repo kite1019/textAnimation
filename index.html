@@ -1,15 +1,15 @@
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Text Animation</title>
     <script type="text/javascript" src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script type="text/javascript" src="layout.js"></script>
     <style>
         body {
             background: #000;
             color: #fff;
         }
-        .top {
+        section {
             height: 100vh;
             background: #3f3f3f;
         }
@@ -26,38 +26,13 @@
 </head>
 <body>
     <p class="text1">Hello, World!</p>
-    <div class="top">content</div>
+    <section>content</section>
     <p class="text2">Text Animation</p>
-    <div class="top">content</div>
+    <section>content</section>
     
 <script>
-    function animation_text(targetDom){
-        const text = document.querySelector(targetDom);  // 取得要轉換的文字元素
-        const words = text.innerText.split('');    // 將文字切成一個個字元，存在陣列中
-        let html = '';                             // 建立一個空字串
-
-        // 將每個字元包裝在一個 <span> 元素中，加入到 html 字串中
-        words.forEach((item, i) => {
-            html += item === ' ' ? '&ensp;' : `<span>${item}</span>`;
-        });
-
-        // 將 html 字串設定為文字元素的內容
-        text.innerHTML = html;
-    }
     animation_text('.text1');
     animation_text('.text2');
-
-    //產生動態
-    ScrollReveal().reveal('p span', {
-        origin: "bottom", 
-        distance: "50px",
-        opacity: 0,
-        duration: 300,
-        interval: 30,
-        easing: 'cubic-bezier(0.5, 0, 0, 1)',
-        viewFactor: -0.3,
-        reset: true,
-    });
 </script>
 </body>
 </html>
