@@ -6,3 +6,4 @@ ScrollReveal.js 滾動式文字動畫
 ```<p class="text1">Hello, World!</p>```
 
 不可用圖片、html tag
+範例codepan: https://codepen.io/kite-lin/pen/ZEMoGGx
